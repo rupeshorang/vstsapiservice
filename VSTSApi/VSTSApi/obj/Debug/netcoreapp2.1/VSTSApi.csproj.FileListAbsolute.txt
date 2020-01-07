@@ -1,0 +1,11 @@
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\bin\Debug\netcoreapp2.1\VSTSApi.deps.json
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\bin\Debug\netcoreapp2.1\VSTSApi.runtimeconfig.json
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\bin\Debug\netcoreapp2.1\VSTSApi.runtimeconfig.dev.json
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\bin\Debug\netcoreapp2.1\VSTSApi.dll
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.csprojAssemblyReference.cache
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.csproj.CoreCompileInputs.cache
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.RazorAssemblyInfo.cache
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.RazorAssemblyInfo.cs
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.AssemblyInfoInputs.cache
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.AssemblyInfo.cs
+C:\Users\azureuser\Desktop\rupesh\VSTSApi\VSTSApi\obj\Debug\netcoreapp2.1\VSTSApi.RazorTargetAssemblyInfo.cache
