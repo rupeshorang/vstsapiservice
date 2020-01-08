@@ -10,6 +10,6 @@ namespace VSTSApi.Service
     {
         WorkItemRoot GetWorkItem(string id, string projectName = null);
 
-        IList<int> GetWorkItemId(string userName, string projectName);
+        IList<int> GetWorkItemId(string projectName, string userName = null);
     }
 }

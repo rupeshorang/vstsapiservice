@@ -10,5 +10,7 @@ namespace VSTSApi
         public string VstsUrl { get; set; }
 
         public string Token { get; set; }
+
+        public string Project { get; set; }
     }
 }

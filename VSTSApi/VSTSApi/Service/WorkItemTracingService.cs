@@ -31,7 +31,7 @@ namespace VSTSApi.Service
             return JsonConvert.DeserializeObject<WorkItemRoot>(response);
         }
 
-        public IList<int> GetWorkItemId(string userName, string projectName)
+        public IList<int> GetWorkItemId(string projectName, string userName = null)
         {
             IList<int> ids = new List<int>();
             var credential = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", settings.Value.Token)));
@@ -42,7 +42,7 @@ namespace VSTSApi.Service
             var stream = response.Content.ReadAsStreamAsync().Result;
             StreamReader reader = new StreamReader(stream);
             var workItems = JsonConvert.DeserializeObject<IList<WorkItemRoot>>(reader.ToString());
-            foreach(var items in workItems)
+            foreach (var items in workItems)
             {
                 ids.Add(items.Id);
             }
@@ -50,14 +50,14 @@ namespace VSTSApi.Service
             return ids;
         }
 
-        private Object GetWorkItemQuery(string project, string user, bool excludeClosed = true)
+        private Object GetWorkItemQuery(string project, string user = null, bool excludeClosed = true)
         {
             Object wiql = new
             {
                 query = "Select [State], [Title] " +
                         "From WorkItems " +
                         "Where [System.TeamProject] = '" + project + "' " +
-                        "And [System.AssignedTo] = '"+user+"' "
+                        "And [System.AssignedTo] = '" + user + "' "
             };
 
             return wiql;
