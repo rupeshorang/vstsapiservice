@@ -10,6 +10,6 @@ namespace VSTSApi.Infrastructure
     {
         HttpClient Inst { get; }
         Task<string> GetStringAsync(string uri);
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item);
+        HttpResponseMessage PostAsync<T>(string uri, T item);
     }
 }

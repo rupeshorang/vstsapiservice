@@ -37,14 +37,14 @@ namespace VSTSApi.Service
             var credential = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", settings.Value.Token)));
             apiClient.Inst.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credential);
             var workItemUrl = $"{remoteServiceBaseUrl}/{projectName}/_apis/wit/wiql?api-version=5.1";
-            var response = apiClient.PostAsync(workItemUrl, GetWorkItemQuery(projectName, userName)).Result;
+            var response = apiClient.PostAsync(workItemUrl, GetWorkItemQuery(projectName, userName));
             response.EnsureSuccessStatusCode();
             var stream = response.Content.ReadAsStreamAsync().Result;
             StreamReader reader = new StreamReader(stream);
-            var workItems = JsonConvert.DeserializeObject<IList<WorkItemRoot>>(reader.ToString());
-            foreach (var items in workItems)
+            var result = JsonConvert.DeserializeObject<WiqlResult>(reader.ReadToEnd().ToString());
+            foreach (var items in result.WorkItems)
             {
-                ids.Add(items.Id);
+                ids.Add(items.workItemId);
             }
 
             return ids;
@@ -52,12 +52,19 @@ namespace VSTSApi.Service
 
         private Object GetWorkItemQuery(string project, string user = null, bool excludeClosed = true)
         {
+            //Object wiql = new
+            //{
+            //    query = "Select [State], [Title] " +
+            //            "From WorkItems " +
+            //            "Where [System.TeamProject] = '" + project + "' " +
+            //            "And [System.AssignedTo] = '" + user + "' "
+            //};
+
             Object wiql = new
             {
-                query = "Select [State], [Title] " +
+                query = "Select [System.Id] " +
                         "From WorkItems " +
-                        "Where [System.TeamProject] = '" + project + "' " +
-                        "And [System.AssignedTo] = '" + user + "' "
+                        "Where [System.TeamProject] = 'MyFirstProject' "
             };
 
             return wiql;

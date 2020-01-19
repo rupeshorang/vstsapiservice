@@ -19,14 +19,14 @@ namespace VSTSApi.Infrastructure
         public Task<string> GetStringAsync(string uri) =>
             client.GetStringAsync(uri);
 
-        public Task<HttpResponseMessage> PostAsync<T>(string uri, T item)
+        public HttpResponseMessage PostAsync<T>(string uri, T item)
         {
             var contentString = new StringContent(JsonConvert.SerializeObject(item), System.Text.Encoding.UTF8, "application/json");
             var method = new HttpMethod("POST");
 
             // send the request               
             var request = new HttpRequestMessage(method, uri) { Content = contentString };
-            return client.SendAsync(request);
+            return client.SendAsync(request).Result;
         }
     }
 }

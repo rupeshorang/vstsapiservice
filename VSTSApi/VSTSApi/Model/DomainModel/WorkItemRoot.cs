@@ -9,7 +9,7 @@ namespace VSTSApi.Model
     public class WorkItemRoot
     {
         [JsonProperty(PropertyName = "id")]
-        public int Id { get; set; }
+        public int TicketId { get; set; }
 
         [JsonProperty(PropertyName = "rev")]
         public int Rev { get; set; }

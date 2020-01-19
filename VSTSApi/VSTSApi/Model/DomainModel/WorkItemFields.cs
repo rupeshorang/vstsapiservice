@@ -9,69 +9,72 @@ namespace VSTSApi.Model
     public class WorkItemFields
     {
         [JsonProperty(PropertyName = "System.AreaPath")]
-        public string SystemAreaPath { get; set; }
+        public string AreaPath { get; set; }
 
         [JsonProperty(PropertyName = "System.TeamProject")]
-        public string SystemTeamProject { get; set; }
+        public string TeamProject { get; set; }
 
         [JsonProperty(PropertyName = "System.IterationPath")]
-        public string SystemIterationPath { get; set; }
+        public string IterationPath { get; set; }
 
         [JsonProperty(PropertyName = "System.WorkItemType")]
-        public string SystemWorkItemType { get; set; }
+        public string WorkItemType { get; set; }
 
         [JsonProperty(PropertyName = "System.State")]
-        public string SystemState { get; set; }
+        public string State { get; set; }
 
         [JsonProperty(PropertyName = "System.Reason")]
-        public string SystemReason { get; set; }
+        public string Reason { get; set; }
 
         [JsonProperty(PropertyName = "System.CreatedDate")]
-        public DateTime SystemCreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         [JsonProperty(PropertyName = "System.CreatedBy")]
-        public UserDetails SystemCreatedBy { get; set; }
+        public UserDetails CreatedBy { get; set; }
 
         [JsonProperty(PropertyName = "System.ChangedDate")]
-        public DateTime SystemChangedDate { get; set; }
+        public DateTime ChangedDate { get; set; }
 
         [JsonProperty(PropertyName = "System.ChangedBy")]
-        public UserDetails SystemChangedBy { get; set; }
+        public UserDetails ChangedBy { get; set; }
 
         [JsonProperty(PropertyName = "System.Title")]
-        public string SystemTitle { get; set; }
+        public string Title { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Scheduling.Effort")]
-        public int MicrosoftVSTSSchedulingEffort { get; set; }
+        public int SchedulingEffort { get; set; }
 
         [JsonProperty(PropertyName = "System.Description")]
-        public string SystemDescription { get; set; }
+        public string Description { get; set; }
 
         [JsonProperty(PropertyName = "System.AssignedTo")]
-        public UserDetails SystemAssignedTo { get; set; }
+        public UserDetails AssignedTo { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Scheduling.RemainingWork")]
-        public int MicrosoftVSTSSchedulingRemainingWork { get; set; }
+        public int SchedulingRemainingWork { get; set; }
 
         [JsonProperty(PropertyName = "System.Tags")]
-        public string SystemTags { get; set; }
+        public string Tags { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Scheduling.OriginalEstimate")]
-        public int MicrosoftVSTSOriginalEstimate { get; set; }
+        public string OriginalEstimate { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Scheduling.CompletedWork")]
-        public int MicrosoftVSTSCompletedWork { get; set; }
+        public string CompletedWork { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Common.ActivatedDate")]
-        public DateTime MicrosoftVSTSActivatedDate { get; set; }
+        public DateTime ActivatedDate { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Common.ActivatedBy")]
         public UserDetails ActivatedBy { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Common.ClosedDate")]
-        public DateTime MicrosoftVSTSClosedDate { get; set; }
+        public DateTime ClosedDate { get; set; }
 
         [JsonProperty(PropertyName = "Microsoft.VSTS.Common.ClosedBy")]
         public UserDetails ClosedBy { get; set; }
+
+        [JsonProperty(PropertyName = "Microsoft.VSTS.Common.Priority")]
+        public string Priority { get; set; }
     }
 }
